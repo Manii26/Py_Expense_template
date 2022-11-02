@@ -24,6 +24,13 @@ expense_questions = [
 def new_expense(*args):
     infos = prompt(expense_questions)
     # Writing the informations on external file might be a good idea ¯\_(ツ)_/¯
+    print(infos)
+   
+    with open('expense_report.csv', 'a', newline=' ') as f:
+        f.write(infos['amount'] + ',' + infos['label'] + ',' + infos['spender'] + ' ')
+        f.write(' ')
+        f.close()
+
     print("Expense Added !")
     return True
 
