@@ -23,3 +23,8 @@ def add_user(*args):
         f.close()
     print("User Added !")
     return True
+
+def user_status():
+    # This function should show the status of the user
+
+    return True
