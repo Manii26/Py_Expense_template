@@ -17,8 +17,8 @@ def add_user(*args):
         print("Please enter a valid name")
         infos = prompt(user_questions)
         b = infos['Name']
-    with open('users.csv', 'a', newline='') as f:
-        f.write(infos['Name'],  ) 
+    with open('users.csv', 'a') as f:
+        f.write('\n' + infos['Name'] )   
         f.write(' ')
         f.close()
     print("User Added !")
